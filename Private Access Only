@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Private Access Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h2>Welcome to Your Private Website</h2>
+    <p id="welcomeMessage">Only you can access this page.</p>
+    <div id="loginDiv">
+        <p>Enter access code:</p>
+        <input type="password" id="accessCode">
+        <button onclick="checkAccess()">Submit</button>
+    </div>
+    <div id="contentDiv" class="hidden">
+        <p>Welcome! You have successfully accessed the website.</p>
+    </div>
+    <script>
+        const ownerCode = "your-secret-code"; // Change this to your secret access code
+        const guestCode = "guest-access-code"; // Change this for guest access
+        
+        function checkAccess() {
+            let code = document.getElementById("accessCode").value;
+            if (code === ownerCode || code === guestCode) {
+                document.getElementById("loginDiv").classList.add("hidden");
+                document.getElementById("contentDiv").classList.remove("hidden");
+            } else {
+                alert("Incorrect access code!");
+            }
+        }
+    </script>
+</body>
+</html>

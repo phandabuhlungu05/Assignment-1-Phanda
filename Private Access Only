@@ -9,6 +9,10 @@
 </head>
 <body>
     <h2>Welcome to Your Private Website</h2>
+    <a href="https://raw.githubusercontent.com/phandabuhlungu05/private-site/main/2026329157%20Assignment.pdf" target="_blank">
+    Download Assignment PDF
+</a>
+
     <p id="welcomeMessage">Only you can access this page.</p>
     <div id="loginDiv">
         <p>Enter access code:</p>
